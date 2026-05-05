@@ -1,6 +1,6 @@
 # PID Piper – Terms of Use
 
-_Last updated: 2025-11-22_
+_Last updated: 2026-05-05_
 
 By installing or using PID Piper ("the Software"), you agree to the following
 terms.
@@ -31,7 +31,7 @@ attributions is shown in the in-app About dialog.
 
 The `blackbox_decode` and `blackbox_decode_INAV` binaries are licensed under
 GPLv3 and are downloaded on demand from their official source. PID Piper
-itself does not bundle these binaries (mere aggregation).
+itself does not bundle these binaries; they are fetched from their official upstream on first use.
 
 ## 5. Telemetry
 The Software collects anonymous error and usage telemetry as described in the

@@ -22,8 +22,8 @@ running locally on your machine.
   <a href="https://github.com/ishumilin/pid-piper/blob/master/LICENSE.md">
     <img alt="License" src="https://img.shields.io/badge/license-Freeware%20(Non--Commercial)-green">
   </a>
-  <a href="https://pid-piper.shumil.in">
-    <img alt="Website" src="https://img.shields.io/badge/website-pid--piper.shumil.in-blue">
+  <a href="https://www.pid-piper.shumil.in">
+    <img alt="Website" src="https://img.shields.io/badge/website-www.pid--piper.shumil.in-blue">
   </a>
   <br>
 
@@ -36,16 +36,54 @@ running locally on your machine.
 Pick the right build for your machine on the
 [Releases page](https://github.com/ishumilin/pid-piper/releases/latest):
 
-| OS      | File |
-| --------| ---- |
-| macOS   | `PID-Piper-x.x.x-mac-x64.dmg` (Intel) / `-arm64.dmg` (Apple Silicon) |
-| Windows | `PID-Piper-x.x.x-win-x64-setup.exe` (Installer) / `-portable.exe` / `.msi` |
-| Linux   | `PID-Piper-x.x.x-linux-x64.AppImage` / `.deb` / `.rpm` |
+| OS | Recommended file |
+| --- | --- |
+| macOS Apple Silicon | `PID-Piper-x.x.x-mac-arm64.dmg` |
+| macOS Intel | `PID-Piper-x.x.x-mac-x64.dmg` |
+| Windows x64 | `PID-Piper-x.x.x-win-x64-setup.exe` / `PID-Piper-x.x.x-win-x64-setup.msi` |
+| Windows ARM64 | `PID-Piper-x.x.x-win-arm64-setup.exe` / `PID-Piper-x.x.x-win-arm64-setup.msi` |
+| Linux x86_64 — Ubuntu/Debian | `PID-Piper-x.x.x-linux-amd64.deb` |
+| Linux x86_64 — Fedora/RHEL | `PID-Piper-x.x.x-linux-x86_64.rpm` |
+| Linux x86_64 — portable | `PID-Piper-x.x.x-linux-x86_64.AppImage` |
+| Linux ARM64 — Ubuntu/Debian | `PID-Piper-x.x.x-linux-arm64.deb` |
+| Linux ARM64 — Fedora/RHEL | `PID-Piper-x.x.x-linux-aarch64.rpm` |
+| Linux ARM64 — portable | `PID-Piper-x.x.x-linux-arm64.AppImage` |
 
 > **Heads-up:** the app is currently unsigned. On Windows, click "More info" → "Run anyway" if SmartScreen warns you. 
 > On macOS Intel (`x64`), right-click → Open the first time. 
 > On macOS Apple Silicon (`arm64`), the quarantine flag will cause the app to bounce forever. Run this in Terminal to fix it:
 > `xattr -cr "/Applications/PID Piper.app"`
+
+### Linux: which package should I download?
+
+We publish three Linux formats:
+
+- **Ubuntu / Debian:** prefer the **`.deb`**.
+- **Fedora / RHEL:** prefer the **`.rpm`**.
+- **Portable fallback:** use the **AppImage**.
+
+> ⚠️ **Ubuntu 24.04+ AppImage users:** Ubuntu 24.04 restricts the AppImage
+> sandbox via AppArmor. If the AppImage fails to launch, install the `.deb`
+> instead.
+
+### Verify your download (optional)
+
+Every release includes:
+- GitHub build provenance / attestations, and
+- Sigstore (cosign) signatures (`.sig` + `.pem`) for each binary.
+
+```bash
+# Verify GitHub-native provenance attestations
+gh attestation verify ./PID-Piper-<version>-<os>-<arch>.<ext> --owner ishumilin
+
+# Verify cosign signature
+cosign verify-blob \
+  --certificate ./PID-Piper-<version>-<os>-<arch>.<ext>.pem \
+  --signature   ./PID-Piper-<version>-<os>-<arch>.<ext>.sig \
+  --certificate-identity-regexp "https://github.com/.*/pid-piper-source/.*" \
+  --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+  ./PID-Piper-<version>-<os>-<arch>.<ext>
+```
 
 ## ✨ Features
 
@@ -101,7 +139,7 @@ code lives in a separate private repository.
 ## ❤ Sponsor
 
 If PID Piper is useful to you and you want to keep it free for everyone,
-please consider [sponsoring on GitHub](https://github.com/sponsors/ishumilin) or
+please consider [sponsoring on GitHub](https://github.com/sponsors/ishumilin) or supporting via Buy Me a Coffee.
 
 <div align="center">
   <a href="https://www.buymeacoffee.com/ishumilin">

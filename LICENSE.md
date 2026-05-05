@@ -2,7 +2,7 @@
 
 **Copyright © 2025 ishumilin. All Rights Reserved.**
 
-_Last updated: 2025-11-22_
+_Last updated: 2026-05-05_
 
 This End User License Agreement ("Agreement") is a legal agreement between you
 ("You") and ishumilin ("Author") for the use of the PID Piper software,
@@ -93,7 +93,7 @@ the in-app About dialog and apply to those components only.
 In particular, the `blackbox_decode` and `blackbox_decode_INAV` binaries are
 licensed under the GNU General Public License v3 (GPLv3) by their respective
 authors. They are downloaded on demand from their official source and are
-**not** bundled with the Software (mere aggregation).
+**not** bundled with the Software; they are fetched from their official upstream on first use.
 
 ---
 
@@ -126,8 +126,7 @@ DAMAGE.
 The Software collects anonymous error and usage telemetry, as described in
 the Privacy Policy (`PRIVACY.md`). By using the Software, You consent
 to this collection. You may disable telemetry by blocking outbound traffic
-to the configured telemetry endpoints, or by using a build that does not
-have telemetry credentials injected at build time.
+to the configured telemetry endpoints.
 
 ---
 

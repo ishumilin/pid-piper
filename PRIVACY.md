@@ -1,6 +1,6 @@
 # PID Piper – Privacy Policy
 
-_Last updated: 2025-11-22_
+_Last updated: 2026-05-05_
 
 PID Piper is a desktop application that analyzes drone Blackbox flight logs
 locally on your computer. We respect your privacy and collect the minimum
@@ -12,8 +12,7 @@ amount of data necessary to operate and improve the app.
   same folder as the source log file and never uploaded.**
 
 ## 2. What we collect remotely (telemetry)
-PID Piper uses two third-party services in **packaged production builds only**.
-They are completely disabled in development.
+PID Piper uses two third-party services.
 
 ### Sentry (error tracking)
 - Service: <https://sentry.io>
@@ -42,8 +41,7 @@ Because we never collect personally identifying information, we cannot
 correlate telemetry events to a specific individual. If you wish to opt out
 entirely, you can:
 - Block outbound traffic to `sentry.io` and `posthog.com` in your firewall, or
-- Use a build that does not have telemetry secrets injected (the open-source
-  source build will have them disabled by default).
+- Use a hosts file / DNS / ad-blocker / firewall to block those endpoints.
 
 ## 5. Contact
 For privacy questions, please open an issue on the public GitHub repository.
