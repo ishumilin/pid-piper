@@ -1,6 +1,7 @@
 # PID Piper – Terms of Use
 
-_Last updated: 2026-05-05_
+_Last updated: 2026-06-19_
+
 
 By installing or using PID Piper ("the Software"), you agree to the following
 terms.
@@ -25,13 +26,14 @@ damages, or other liability arising from the use of the Software, including
 but not limited to crashes, equipment damage, or injury to persons or property.
 
 ## 4. Third-party components
-The Software bundles or downloads several open-source components, each
-governed by its own license (MIT, Apache-2.0, GPLv3, etc.). The full list of
-attributions is shown in the in-app About dialog.
+The Software bundles several open-source components, each governed by its own
+license (MIT, Apache-2.0, ISC, etc.). The full list of attributions is shown in
+the in-app About dialog.
 
-The `blackbox_decode` and `blackbox_decode_INAV` binaries are licensed under
-GPLv3 and are downloaded on demand from their official source. PID Piper
-itself does not bundle these binaries; they are fetched from their official upstream on first use.
+Blackbox logs are decoded by PID Piper's own clean-room decoder; the Software
+does not bundle, download, or execute any third-party GPL-licensed decoder
+binary.
+
 
 ## 5. Telemetry
 The Software collects anonymous error and usage telemetry as described in the

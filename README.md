@@ -49,10 +49,11 @@ Pick the right build for your machine on the
 | Linux ARM64 — Fedora/RHEL | `PID-Piper-x.x.x-linux-aarch64.rpm` |
 | Linux ARM64 — portable | `PID-Piper-x.x.x-linux-arm64.AppImage` |
 
-> **Heads-up:** the app is currently unsigned. On Windows, click "More info" → "Run anyway" if SmartScreen warns you. 
-> On macOS Intel (`x64`), right-click → Open the first time. 
-> On macOS Apple Silicon (`arm64`), the quarantine flag will cause the app to bounce forever. Run this in Terminal to fix it:
-> `xattr -cr "/Applications/PID Piper.app"`
+> **Heads-up:** macOS builds are **signed with an Apple Developer ID and
+> notarized**, so they launch normally — no right-click-Open or `xattr`
+> workaround needed. Windows builds are currently **unsigned**: if SmartScreen
+> warns you, click "More info" → "Run anyway".
+
 
 ### Linux: which package should I download?
 

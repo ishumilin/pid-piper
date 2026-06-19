@@ -2,7 +2,8 @@
 
 **Copyright © 2025 ishumilin. All Rights Reserved.**
 
-_Last updated: 2026-05-05_
+_Last updated: 2026-06-19_
+
 
 This End User License Agreement ("Agreement") is a legal agreement between you
 ("You") and ishumilin ("Author") for the use of the PID Piper software,
@@ -86,14 +87,14 @@ You may NOT:
 
 ## 3. Third-party components
 
-The Software bundles or downloads several open-source components, each
-governed by its own license. These licenses (and notices) are presented in
-the in-app About dialog and apply to those components only.
+The Software bundles several open-source components, each governed by its own
+license. These licenses (and notices) are presented in the in-app About dialog
+and apply to those components only.
 
-In particular, the `blackbox_decode` and `blackbox_decode_INAV` binaries are
-licensed under the GNU General Public License v3 (GPLv3) by their respective
-authors. They are downloaded on demand from their official source and are
-**not** bundled with the Software; they are fetched from their official upstream on first use.
+Blackbox logs are decoded by the Author's own clean-room decoder that is part
+of the Software. The Software does **not** bundle, download, or execute any
+third-party GPL-licensed decoder binary.
+
 
 ---
 
