@@ -31,7 +31,7 @@ running locally on your machine.
 
 <p align="center">
   <a href="https://apps.apple.com/ch/app/pid-piper/id6782126510">
-    <img alt="Download on the Mac App Store" src="https://www.pid-piper.shumil.in/badges/mac-app-store.svg" height="44">
+    <img alt="Download on the Mac App Store" src="./.github/assets/mac-app-store.svg" height="44">
   </a>
   &nbsp;&nbsp;
   <a href="https://get.microsoft.com/installer/download/9P2TBM5P2JMQ?referrer=appbadge">
